@@ -37,7 +37,7 @@ public class Product extends Timestamped{
     @Column(nullable = false)
     private Long userId;
 
-    @ManyToMany
+    @ManyToMany // 단점이 있다. 이 프로젝트에선 괜찮음
     private List<Folder> folderList = new ArrayList<>();
 
     public Product(ProductRequestDto requestDto, Long userId) {
